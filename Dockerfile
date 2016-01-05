@@ -1,7 +1,7 @@
 FROM kutsudock/rpi-alpine:latest
 
 RUN apk update \
-		&& apk add lua lua-dev luarocks luarocks5.1 --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
+		&& apk add lua lua-dev --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
 		&& apk upgrade \
 		&& rm -rf /var/cache/apk/* \
 		&& apk update
