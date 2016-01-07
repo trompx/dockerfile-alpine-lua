@@ -15,6 +15,7 @@ RUN apk update \
 		&& apk del build-base gcc make curl automake autoconf tar \
 		&& apk upgrade \
 		&& rm -rf /var/cache/apk/* \
+		&& cd /lua \
 		&& rm -rf /luarocks \
 		&& apk update
 
