@@ -4,7 +4,7 @@ ENV VERSION 2.2.2
 WORKDIR /root
 RUN apk update \
 		&& apk add build-base gcc make curl automake autoconf tar \
-		lua5.2 lua5.2-dev --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
+		lua lua-dev --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
 		&& apk upgrade \
 		&& mkdir -m 777 -p /luarocks /lua \
 		&& wget http://luarocks.org/releases/luarocks-${VERSION}.tar.gz \
